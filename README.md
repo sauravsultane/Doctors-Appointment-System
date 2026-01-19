@@ -7,7 +7,14 @@ A modern **React + Tailwind CSS** web application for booking doctor appointment
 - **Admin Panel:** https://hospital-management-system-admin-sxnx.onrender.com/
 
 ---
+## 👨‍💻 Sample Admin Credentials
 
+Use these credentials to access the admin panel:
+
+- **Email:** admin@gmail.com  
+- **Password:** saurav
+
+---
 ## 🚀 Features
 
 - Doctor listing with profile details  
@@ -46,12 +53,12 @@ A modern **React + Tailwind CSS** web application for booking doctor appointment
 
 ---
 
-## 📖 Getting Started
 
+
+## 📖 Getting Started
 
 ```bash
 git clone https://github.com/sauravsultane/Hospital-Management-System.git
 cd Hospital-Management-System
 npm install
 npm run dev
-```
