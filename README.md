@@ -1,32 +1,57 @@
+## 🏥 Hospital Appointment Booking System
 
-# 🏥 Hospital Appointment Booking System
+A modern **React + Tailwind CSS** web application for booking doctor appointments online. Built to simulate real-world hospital workflows while mastering core React concepts and frontend architecture.
 
-A **React & Tailwind CSS** project for booking doctor appointments online. This project helps users schedule appointments with doctors while learning **React, Tailwind CSS, Context API, and React Router**.
+### 🌐 Live Demo  
+- **Client Portal:** https://hospital-appointments-system-frontend.onrender.com/  
+- **Admin Panel:** https://hospital-management-system-admin-sxnx.onrender.com/
 
-## 🚀 Features  
-✅ Doctor listing with details (name, specialization, experience, fees)  
-✅ Appointment slot selection with real-time availability  
-✅ Responsive UI with **Tailwind CSS**  
-✅ State management using **Context API**  
-✅ Routing with **React Router**  
+---
 
-## 🛠️ Tech Stack  
-- **Frontend:** React, Tailwind CSS  
-- **State Management:** Context API  
-- **Routing:** React Router  
+## 🚀 Features
 
-## 📌 Learning Outcomes  
-✔️ Understanding **React hooks (useState, useEffect, useContext)**  
-✔️ Implementing **dynamic slot booking**  
-✔️ Working with **responsive design using Tailwind CSS**  
-✔️ Managing state efficiently with **Context API**  
+- Doctor listing with profile details  
+- Real-time appointment slot selection  
+- Patient booking management  
+- Admin dashboard for approvals  
+- Fully responsive UI with Tailwind  
+- State handling using Context API  
+- Clean routing with React Router
 
-## 📖 Getting Started  
+---
 
-### 1️⃣ Clone the Repository  
-```sh
+## 🛠 Tech Stack
+
+**Frontend:**  
+- React.js  
+- Tailwind CSS  
+- React Router  
+- Context API  
+
+**Tooling:**  
+- Vite  
+- ESLint  
+- Render for deployment
+
+---
+
+## 📌 Learning Outcomes
+
+- Practical use of React hooks – useState, useEffect, useContext  
+- Dynamic slot booking logic  
+- Component driven architecture  
+- Global state management  
+- Responsive design workflow  
+- Real project deployment
+
+---
+
+## 📖 Getting Started
+
+
+```bash
 git clone https://github.com/sauravsultane/Hospital-Management-System.git
 cd Hospital-Management-System
-npm frontend
-npm npm run dev
-
+npm install
+npm run dev
+```
