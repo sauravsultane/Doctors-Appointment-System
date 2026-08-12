@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { AdminContext } from "../context/AdminContext";
+import { DoctorContext } from "../context/DoctorContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -10,6 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const { setAToken, backendUrl } = useContext(AdminContext);
+  const { setDToken } = useContext(DoctorContext);
 
   // Add fallback for when context is not available
   if (!backendUrl) {
@@ -26,9 +28,6 @@ const Login = () => {
   const onSubmitHandler = async (event) => {
     event.preventDefault();
     try {
-      // const { data } = await axios.post(backendUrl + '/api/admin/login', { email, password });
-      // console.log("API response:", data);
-
       if(state==='Admin'){
         const { data } = await axios.post(backendUrl + '/api/admin/login', { email, password });
         if(data.success){
@@ -37,14 +36,15 @@ const Login = () => {
         }else{
           toast.error(data.message);
         }
+      } else {
+        const { data } = await axios.post(backendUrl + '/api/doctor/login', { email, password });
+        if(data.success){
+          localStorage.setItem('dToken', data.token);
+          setDToken(data.token);
+        }else{
+          toast.error(data.message);
+        }
       }
-      // if (data.success) {
-      //   localStorage.setItem('aToken', data.token);
-      //   setAToken(data.token);
-      //   toast.success("Admin Login Successfully");
-      // } else {
-      //   toast.error(data.message);
-      // }
     } catch (err) {
       console.error("Error during login:", err);
       toast.error("Login failed. Please try again.");
