@@ -14,6 +14,10 @@ const loginDoctor = async (req, res) => {
         if (!user) {
             return res.json({ success: false, message: "Invalid credentials" })
         }
+        
+        if (!user.password) {
+            return res.json({ success: false, message: "Invalid credentials" })
+        }
 
         const isMatch = await bcrypt.compare(password, user.password)
 
